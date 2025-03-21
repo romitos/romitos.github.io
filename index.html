@@ -1,134 +1,207 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="fr">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Doe’s Portfolio</title>
+    <style>
+        /* Basic Reset and Simple Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <meta charset="UTF-8">
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        header, nav, main, footer {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    <title>Your Portfolio</title>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
 
-    <link rel="stylesheet" href="styles.css">
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
 
+        nav a {
+            text-decoration: none;
+            color: #1DA1F2;
+            font-weight: 600;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') center/cover no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+
+        /* About Section */
+        .about {
+            margin-bottom: 2rem;
+        }
+        .about h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .portfolio .card {
+            border: 1px solid #eee;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Contact Section */
+        .contact {
+            margin-top: 2rem;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: auto;
+        }
+        .contact label {
+            font-weight: 600;
+        }
+        .contact input,
+        .contact textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+        }
+        .contact button {
+            padding: 0.75rem;
+            border: none;
+            background-color: #1DA1F2;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
 </head>
-
 <body>
 
-    <header>
+<!-- Navigation -->
+<nav>
+    <div class="logo">John Doe</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <div class="container">
+<!-- Header / Hero -->
+<header>
+    <div class="hero">
+        <h2>Creating Beautiful & Engaging Experiences</h2>
+    </div>
+    <h1>Welcome to My Portfolio</h1>
+</header>
 
-            <h1>Your Name</h1>
-
-            <nav>
-
-                <ul>
-
-                    <li><a href="#about">About</a></li>
-
-                    <li><a href="#portfolio">Portfolio</a></li>
-
-                    <li><a href="#contact">Contact</a></li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-    <section id="about">
-
-        <div class="container">
-
-            <h2>About Me</h2>
-
-            <p>Hi! I'm a passionate developer with experience in various technologies. I love creating beautiful and functional websites and applications.</p>
-
-        </div>
-
+<!-- Main Content -->
+<main>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel urna a dui pretium ullamcorper. Donec sit amet lacus vitae orci varius pretium.</p>
     </section>
 
-
-    <section id="portfolio">
-
-        <div class="container">
-
-            <h2>My Work</h2>
-
-            <div class="portfolio-grid">
-
-                <div class="portfolio-item">
-
-                    <img src="project1.jpg" alt="Project 1">
-
-                    <h3>Project Title 1</h3>
-
-                    <p>Description of Project 1</p>
-
-                </div>
-
-                <div class="portfolio-item">
-
-                    <img src="project2.jpg" alt="Project 2">
-
-                    <h3>Project Title 2</h3>
-
-                    <p>Description of Project 2</p>
-
-                </div>
-
-                <div class="portfolio-item">
-
-                    <img src="project3.jpg" alt="Project 3">
-
-                    <h3>Project Title 3</h3>
-
-                    <p>Description of Project 3</p>
-
-                </div>
-
-                <div class="portfolio-item">
-
-                    <img src="project4.jpg" alt="Project 4">
-
-                    <h3>Project Title 4</h3>
-
-                    <p>Description of Project 4</p>
-
-                </div>
-
-            </div>
-
+    <!-- Portfolio Section -->
+    <section id="work" class="portfolio">
+        <div class="card">
+            <img src="project1.jpg" alt="Project 1" style="width:100%;">
+            <h3>Project One</h3>
+            <p>Short description about the project.</p>
         </div>
-
+        <div class="card">
+            <img src="project2.jpg" alt="Project 2" style="width:100%;">
+            <h3>Project Two</h3>
+            <p>Short description about the project.</p>
+        </div>
+        <div class="card">
+            <img src="project3.jpg" alt="Project 3" style="width:100%;">
+            <h3>Project Three</h3>
+            <p>Short description about the project.</p>
+        </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form action="your-server-endpoint" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-    <footer>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
 
-        <div class="container">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-            <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</main>
 
-            <div class="socials">
-
-                <a href="#">Facebook</a>
-
-                <a href="#">Twitter</a>
-
-                <a href="#">LinkedIn</a>
-
-            </div>
-
-        </div>
-
-    </footer>
+<!-- Footer -->
+<footer>
+    © 2025 Romain Maunier. All rights reserved.
+</footer>
 
 </body>
-
 </html>
